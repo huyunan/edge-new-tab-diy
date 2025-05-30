@@ -1,0 +1,18 @@
+{
+   "action": {
+      "default_title": "新建标签页"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "description": "新建标签页",
+   "icons": {
+      "16": "icon_16.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+   },
+   "manifest_version": 3,
+   "name": "新建标签页",
+   "permissions": [ "tabs"],
+   "version": "1.0"
+}
