@@ -7,7 +7,6 @@ function onError(error) {
 }
 
 function handleCreated(tab) {
-  console.log(tab);
   if (tab.pendingUrl == "edge://newtab/" || tab.url == "edge://newtab/") {
       let creating = chrome.tabs.update({
         url: "https://www.baidu.com",
@@ -17,3 +16,10 @@ function handleCreated(tab) {
 }
 
 chrome.tabs.onCreated.addListener(handleCreated);
+
+chrome.action.onClicked.addListener((tab) => {
+  let creating = chrome.tabs.create({
+    url: "https://www.baidu.com",
+  });
+  creating.then(onCreated, onError);
+});
