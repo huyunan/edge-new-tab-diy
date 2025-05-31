@@ -5,6 +5,9 @@
    "background": {
       "service_worker": "background.js"
    },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
    "description": "新建标签页",
    "icons": {
       "16": "icon_16.png",
@@ -13,6 +16,6 @@
    },
    "manifest_version": 3,
    "name": "新建标签页",
-   "permissions": [ "tabs"],
+   "permissions": [ "tabs", "activeTab"],
    "version": "1.0"
 }
