@@ -7,7 +7,8 @@ function onError(error) {
 }
 
 function handleCreated(tab) {
-  if (tab.pendingUrl == "edge://newtab/" || tab.url == "edge://newtab/") {
+  if (tab.pendingUrl == "edge://newtab/" || tab.url == "edge://newtab/"
+        || tab.pendingUrl == "chrome://newtab/" || tab.url == "chrome://newtab/") {
       let creating = chrome.tabs.update({
         url: "https://www.baidu.com",
       });
