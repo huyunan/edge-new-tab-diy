@@ -9,7 +9,7 @@ body {
 
 .container {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -18,7 +18,7 @@ body {
 
 .bottom-container {
   background-color: #fff;
-  border-radius: 10px;  /* 添加外层容器圆角 */
+  border-radius: 5px;  /* 添加外层容器圆角 */
   margin: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   overflow: hidden;  /* 确保内容不会超出圆角 */
@@ -27,7 +27,8 @@ body {
 .bottom-controls {
   display: flex;
   align-items: center;  /* 确保所有元素垂直居中 */
-  padding: 6px 12px;
+  padding: 5px 10px;
+  margin-top: 1px;
   background-color: #fff;
 }
 
@@ -44,7 +45,7 @@ body {
   border-radius: 4px;
   font-size: 12px;
   outline: none;
-  height: 24px;
+  height: 26px;
   box-sizing: border-box;
 }
 
