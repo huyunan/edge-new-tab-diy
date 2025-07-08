@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!url) {
       setMessage('link', null, 'msg-info', defaultUrl)
       chrome.storage.local.set({ newTabUrl: defaultUrl })
+      setMessage('link', null, 'msg-info', defaultUrl)
+      return
     }
     if (type == 'init') {
       setMessage('link', null, 'msg-info', url)
