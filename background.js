@@ -61,7 +61,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 
 chrome.contextMenus.onClicked.addListener(
   (info) => {
-    if (info.menuItemId != '弹出框') return
+    if (info.menuItemId != 'pop-up box') return
     switchInput = info.checked
     chrome.storage.local.set({ switchInput })
   }
@@ -75,17 +75,17 @@ async function setPopup(switchInput) {
     chrome.action.setPopup({popup: 'popup.html'});
   }
   try {
-    await chrome.contextMenus.update('弹出框', {
-      title: `弹出框隐藏`,
+    await chrome.contextMenus.update('pop-up box', {
+      title: `Pop-up box hidden`,
       type: 'checkbox',
       contexts: ['action'],
       checked: switchInput
     });
   } catch (error) {
-    if (error.toString().indexOf('弹出框') > -1) {
+    if (error.toString().indexOf('pop-up box') > -1) {
       chrome.contextMenus.create({
-        id: '弹出框',
-        title: `弹出框隐藏`,
+        id: 'pop-up box',
+        title: `Pop-up box hidden`,
         type: 'checkbox',
         checked: switchInput,
         contexts: ['action']

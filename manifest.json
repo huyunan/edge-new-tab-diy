@@ -1,6 +1,6 @@
 {
    "action": {
-      "default_title": "新建标签页",
+      "default_title": "New Tab",
       "default_popup": "popup.html"
    },
    "background": {
@@ -9,14 +9,14 @@
    "chrome_url_overrides": {
       "newtab": "newtab.html"
    },
-   "description": "新建标签页",
+   "description": "New Tab",
    "icons": {
       "16": "icon_16.png",
       "48": "icon_48.png",
       "128": "icon_128.png"
    },
    "manifest_version": 3,
-   "name": "新建标签页",
+   "name": "New Tab",
    "permissions": [ "tabs", "storage", "activeTab", "contextMenus"],
    "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
    "version": "1.2"

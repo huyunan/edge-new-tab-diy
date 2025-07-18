@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('save').addEventListener('click', () => {
     const value = document.getElementById('urlInput').value
     if (!regexp.test(value)) {
-      setMessage('hint', '输入的链接地址不正确！', 'msg-error')
+      setMessage('hint', 'The input link address is incorrect！', 'msg-error')
       setTimeout(() => {
         getNewTabUrl()
       }, 1000)
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setMessage('link', null, 'msg-info', url)
     } else if (type == 'save') {
       chrome.storage.local.set({ newTabUrl: url }, () => {
-        setMessage('hint', '链接地址保存成功！', 'msg-success')
+        setMessage('hint', 'The link address has been saved successfully！', 'msg-success')
         setTimeout(() => {
           setMessage('link', null, 'msg-info', url)
         }, 1000)
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     } else if (type == 'reset') {
       chrome.storage.local.set({ newTabUrl: url }, () => {
-        setMessage('hint', '重置成功！', 'msg-success')
+        setMessage('hint', 'Reset successful!', 'msg-success')
         setTimeout(() => {
           setMessage('link', null, 'msg-info', url)
         }, 1000)
