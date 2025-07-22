@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (type == 'link') {
       document.getElementById(
         'content'
-      ).innerHTML = `<div class="${cls} message" title="${url}"><a target="_blank" href="${url}">${url}</a></div>`
+      ).innerHTML = `<div class="${cls} message" title="${url}"><a target="_blank" href="${url}">&#x27bc${url}</a></div>`
     }
   }
 })
