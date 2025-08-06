@@ -19,5 +19,5 @@
    "name": "New Tab",
    "permissions": [ "tabs", "storage", "activeTab", "contextMenus"],
    "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
-   "version": "1.2"
+   "version": "1.3"
 }
