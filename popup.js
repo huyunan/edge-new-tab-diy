@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.getElementById('save').addEventListener('click', () => {
-    const value = document.getElementById('urlInput').value
-    if (!regexp.test(value)) {
+    const urlInput = document.getElementById('urlInput')
+    if (!urlInput.checkValidity()) {
       setMessage('hint', '输入的链接地址不正确！', 'msg-error')
       setTimeout(() => {
         getNewTabUrl()
       }, 1000)
     } else {
-      setUrl(value, 'save')
+      setUrl(urlInput.value, 'save')
     }
   })
 
@@ -68,9 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
         'content'
       ).innerHTML = `<div class="${cls} message">${msg}</div>`
     } else if (type == 'link') {
+      if (regexp.test(url)) {
+        sethtml = `<div class="${cls} message" title="${url}"><a target="_blank" href="${url}">&#x27bc;${url}</a></div>`
+      } else {
+        sethtml = `<div class="${cls} message" title="${url}"><a>&#x27bc;${url}</a></div>`
+      }
       document.getElementById(
         'content'
-      ).innerHTML = `<div class="${cls} message" title="${url}"><a target="_blank" href="${url}">&#x27bc${url}</a></div>`
+      ).innerHTML = sethtml
     }
   }
 })
