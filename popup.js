@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const defaultUrl = 'https://www.baidu.com/'
   const regexp = new RegExp(
-    '^(https?)://[^\s/$.?#].[^\s]*.*$'
+    '^(https?)://[^\\s/$.?#].[^\\s]*.*$'
   )
 
   // 初始化时获取 newTabUrl
